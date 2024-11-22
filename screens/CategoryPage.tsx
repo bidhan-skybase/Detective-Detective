@@ -3,6 +3,9 @@ import globalStyles from '../global_styles.tsx';
 import CustomText from '../components/customTextComponent.tsx';
 import TextFieldComponent from '../components/TextInputComponent.tsx';
 import CategoryButtonComponent from '../components/CategoryButtonComponent.tsx';
+import {GameCategories} from '../constants/categories.ts';
+
+
 
 export default function CategoriesPage() {
   return (
@@ -28,7 +31,23 @@ export default function CategoriesPage() {
       <CustomText fontSize={20} fontWeight={'SemiBold'} style={{marginBottom:20}}>
         Choose a Category
       </CustomText>
-      <CategoryButtonComponent></CategoryButtonComponent>
+      <View style={{ flexDirection: 'row',
+        flexWrap: 'wrap',
+
+        justifyContent: 'space-between',
+        padding: 10, }}>
+        {
+          GameCategories.map((category,index)=>(
+            <CategoryButtonComponent
+              category={category.category}
+              id={category.id}
+              color={category.color}
+              icon={category.icon}
+              key={index}
+            ></CategoryButtonComponent>
+          ))
+        }
+      </View>
     </SafeAreaView>
   );
 }
