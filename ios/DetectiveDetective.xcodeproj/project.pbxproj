@@ -12,9 +12,15 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		361F53A8884D4C9591738A7B /* Parkinsans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0F28DB43184C469778A07E /* Parkinsans-Regular.ttf */; };
 		555E7386B059D5167AFCA0CC /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		593CFC9C17E64E65A3B0BB02 /* Parkinsans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5CE90A2086C495FB02EA690 /* Parkinsans-Bold.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-DetectiveDetective-DetectiveDetectiveTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-DetectiveDetective-DetectiveDetectiveTests.a */; };
+		797BE23FF63C4881AE61D870 /* Parkinsans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECFE97B96BB045CB90B88FA2 /* Parkinsans-Light.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		84F363A2DAFB4A2FBD9B5771 /* Parkinsans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82D242940932496289986E02 /* Parkinsans-Medium.ttf */; };
+		9E4E23C6B26B42C8A8D20D5B /* Parkinsans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B4467C85F7E46CBB6D83D4C /* Parkinsans-SemiBold.ttf */; };
+		F9104DD1D96C440BBB7C51A6 /* Parkinsans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06DCEE8E8D174556A6306956 /* Parkinsans-ExtraBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +37,7 @@
 		00E356EE1AD99517003FC87E /* DetectiveDetectiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DetectiveDetectiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* DetectiveDetectiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetectiveDetectiveTests.m; sourceTree = "<group>"; };
+		06DCEE8E8D174556A6306956 /* Parkinsans-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Parkinsans-ExtraBold.ttf"; path = "../assets/fonts/Parkinsans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* DetectiveDetective.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetectiveDetective.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = DetectiveDetective/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = DetectiveDetective/AppDelegate.mm; sourceTree = "<group>"; };
@@ -39,12 +46,17 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DetectiveDetective/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = DetectiveDetective/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-DetectiveDetective-DetectiveDetectiveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DetectiveDetective-DetectiveDetectiveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B4467C85F7E46CBB6D83D4C /* Parkinsans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Parkinsans-SemiBold.ttf"; path = "../assets/fonts/Parkinsans-SemiBold.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-DetectiveDetective.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DetectiveDetective.debug.xcconfig"; path = "Target Support Files/Pods-DetectiveDetective/Pods-DetectiveDetective.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-DetectiveDetective.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DetectiveDetective.release.xcconfig"; path = "Target Support Files/Pods-DetectiveDetective/Pods-DetectiveDetective.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-DetectiveDetective-DetectiveDetectiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DetectiveDetective-DetectiveDetectiveTests.debug.xcconfig"; path = "Target Support Files/Pods-DetectiveDetective-DetectiveDetectiveTests/Pods-DetectiveDetective-DetectiveDetectiveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5D0F28DB43184C469778A07E /* Parkinsans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Parkinsans-Regular.ttf"; path = "../assets/fonts/Parkinsans-Regular.ttf"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-DetectiveDetective.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DetectiveDetective.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = DetectiveDetective/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		82D242940932496289986E02 /* Parkinsans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Parkinsans-Medium.ttf"; path = "../assets/fonts/Parkinsans-Medium.ttf"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-DetectiveDetective-DetectiveDetectiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DetectiveDetective-DetectiveDetectiveTests.release.xcconfig"; path = "Target Support Files/Pods-DetectiveDetective-DetectiveDetectiveTests/Pods-DetectiveDetective-DetectiveDetectiveTests.release.xcconfig"; sourceTree = "<group>"; };
+		C5CE90A2086C495FB02EA690 /* Parkinsans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Parkinsans-Bold.ttf"; path = "../assets/fonts/Parkinsans-Bold.ttf"; sourceTree = "<group>"; };
+		ECFE97B96BB045CB90B88FA2 /* Parkinsans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Parkinsans-Light.ttf"; path = "../assets/fonts/Parkinsans-Light.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -109,6 +121,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		66A58977567245FBB19F35A3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C5CE90A2086C495FB02EA690 /* Parkinsans-Bold.ttf */,
+				06DCEE8E8D174556A6306956 /* Parkinsans-ExtraBold.ttf */,
+				ECFE97B96BB045CB90B88FA2 /* Parkinsans-Light.ttf */,
+				82D242940932496289986E02 /* Parkinsans-Medium.ttf */,
+				5D0F28DB43184C469778A07E /* Parkinsans-Regular.ttf */,
+				1B4467C85F7E46CBB6D83D4C /* Parkinsans-SemiBold.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +151,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				66A58977567245FBB19F35A3 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -247,6 +274,12 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				555E7386B059D5167AFCA0CC /* PrivacyInfo.xcprivacy in Resources */,
+				593CFC9C17E64E65A3B0BB02 /* Parkinsans-Bold.ttf in Resources */,
+				F9104DD1D96C440BBB7C51A6 /* Parkinsans-ExtraBold.ttf in Resources */,
+				797BE23FF63C4881AE61D870 /* Parkinsans-Light.ttf in Resources */,
+				84F363A2DAFB4A2FBD9B5771 /* Parkinsans-Medium.ttf in Resources */,
+				361F53A8884D4C9591738A7B /* Parkinsans-Regular.ttf in Resources */,
+				9E4E23C6B26B42C8A8D20D5B /* Parkinsans-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
