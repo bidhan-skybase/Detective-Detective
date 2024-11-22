@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, TextInput, TextInputProps, ViewStyle } from "react-native";
 
 interface TextFieldProps extends TextInputProps {
-  style?: ViewStyle; // Accept additional style for customization
+  style?: ViewStyle;
 }
 
 export default function TextFieldComponent({
@@ -26,11 +26,12 @@ export default function TextFieldComponent({
 const styles = StyleSheet.create({
   textFieldStyle: {
     height: 48,
-    borderRadius: 8,
+    borderRadius: 8,     // Text color
+    fontWeight: "bold",  // Text weight (bold in this case)
     borderWidth: 2,
     borderColor: "black",
-    paddingLeft: 8,
-
+    paddingLeft: 16,
     fontFamily: "Parkinsans-SemiBold",
+    fontSize:20,
   },
 });
