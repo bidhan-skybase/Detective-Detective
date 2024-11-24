@@ -18,10 +18,10 @@ export default function RestartPage({ navigation }: Props) {
           fontSize={26}
           fontWeight={'SemiBold'}
           style={{justifyContent: 'center', alignItems: 'center'}}>
-          Player selection is complete
+          Who is the liar?
         </CustomText>
       </View>
-      <Text style={{fontSize:40,textAlign:"center",marginTop:40}}>🎇</Text>
+      <Text style={{fontSize:40,textAlign:"center",marginTop:40}}>🕵️</Text>
       <View
         style={[
           globalStyles.row,

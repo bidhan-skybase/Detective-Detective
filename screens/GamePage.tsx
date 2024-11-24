@@ -5,16 +5,18 @@ import CloseIcon from '../assets/icons/closeIcon.tsx';
 import {AppColors} from '../constants/colors.ts';
 import CustomText from '../components/customTextComponent.tsx';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import AnimatedCircle from '../components/AnimatedContainer.tsx';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'GamePage'>;
 
 const GamePage = ({navigation, route}: Props) => {
   const [currentCount, setCount] = useState(1);
   const {categoryTile, playersCount} = route.params || {};
-  function incremenet(){
+  function increment(){
     if(currentCount < playersCount!){
       setCount(currentCount + 1);
     }else{
+      setCount(1);
       navigation.navigate('RestartPage');
     }
   }
@@ -23,9 +25,9 @@ const GamePage = ({navigation, route}: Props) => {
     <ScrollView
       style={[
         globalStyles.main,
-        {backgroundColor: 'transparent', marginTop: 60},
+        {backgroundColor: 'transparent', marginTop: 80,marginHorizontal: 0},
       ]}>
-      <View style={[globalStyles.row, { alignItems: 'center', position: 'relative',marginTop:10 }]}>
+      <View style={[globalStyles.row, { alignItems: 'center', position: 'relative',marginTop:10 ,marginHorizontal:16}]}>
         <CustomText
           fontSize={24}
           fontWeight={'SemiBold'}
@@ -51,8 +53,14 @@ const GamePage = ({navigation, route}: Props) => {
           </View>
         </Pressable>
       </View>
-
-      <View style={[globalStyles.row, {justifyContent: 'center',marginTop:"10%"}]}>
+      <CustomText
+        fontSize={18}
+        fontWeight={'Medium'}
+        style={{textAlign:"center", marginTop:"10%",color:"grey"}}
+      >
+       Players
+      </CustomText>
+      <View style={[globalStyles.row, {justifyContent: 'center'}]}>
         <CustomText
           fontSize={30}
           fontWeight={'Medium'}
@@ -63,20 +71,11 @@ const GamePage = ({navigation, route}: Props) => {
           {' '}
           out of{' '}
         </CustomText>
-        <CustomText fontSize={38} fontWeight={'SemiBold'}>
+        <CustomText fontSize={30} fontWeight={'SemiBold'}>
           {playersCount}
         </CustomText>
       </View>
-      <Pressable onLongPress={ ()=>{
-       incremenet()
-      }}>
-        <View style={{justifyContent:"center",alignItems:"center",marginTop:"30%"}}>
-          <View style={[styles.circle,{height: 200,width: 200,justifyContent:"center",alignItems:"center"}]}>
-            <CustomText fontSize={22}>Press and hold</CustomText>
-          </View>
-        </View>
-      </Pressable>
-
+        <AnimatedCircle onPressOut={increment}/>
 
     </ScrollView>
   );
