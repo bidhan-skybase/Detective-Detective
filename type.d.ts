@@ -9,5 +9,6 @@ interface GameCategory {
 type RootStackParamList = {
   Home:  undefined,
   CategoryPage: undefined,
-  GamePage:  undefined
+  GamePage:  {categoryTile:string,playersCount:number}|undefined,
+  RestartPage:  undefined,
 }

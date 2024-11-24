@@ -1,5 +1,5 @@
 import {AppColors} from '../constants/colors.ts';
-import {View,StyleSheet} from 'react-native';
+import {View,StyleSheet,Pressable} from 'react-native';
 import CustomText from './customTextComponent.tsx';
 import React from 'react';
 
@@ -10,24 +10,23 @@ type CategoryButtonProps={
   icon: React.ComponentProps<any>,
   color:string
 }
-export  default function CategoryButtonComponent(props:CategoryButtonProps) {
+export default function CategoryButtonComponent(props: CategoryButtonProps) {
+
   return (
-    <View style={styles.container}>
+    <Pressable style={styles.container} onPress={props.onTap}>
       <View
         style={[
           styles.circle,
           {
-            marginBottom: 4,
             backgroundColor: props.color,
-            justifyContent: 'center',
-            alignItems: 'center',
           },
         ]}>
-        <props.icon></props.icon>
+        <props.icon />
       </View>
-
-      <CustomText fontWeight={'Medium'}>{props.title}</CustomText>
-    </View>
+      <CustomText fontWeight="Medium" >
+        {props.title}
+      </CustomText>
+    </Pressable>
   );
 }
 
@@ -49,6 +48,8 @@ const styles=StyleSheet.create({
     width: 40,
     borderWidth: 2,
     borderRadius: 100,
+    justifyContent:'center',
+    alignItems:"center",
     backgroundColor: AppColors.yellowAccentColor,
   },
 });

@@ -84,7 +84,12 @@ export default function CategoriesPage({navigation}: Props) {
               title={category.category}
               color={category.color}
               icon={category.icon}
-              onTap={()=>{}}
+              onTap={() => {
+                navigation.navigate('GamePage', {
+                  categoryTile: category.category,
+                  playersCount: parseInt(players, 10),
+                });
+              }}
               key={index}
              />
           ))
