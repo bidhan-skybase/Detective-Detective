@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",  // Text weight (bold in this case)
     borderWidth: 2,
     borderColor: "black",
-    paddingLeft: 16,
+    paddingLeft: 12,
     fontFamily: "Parkinsans-SemiBold",
     fontSize:20,
   },

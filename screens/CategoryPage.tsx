@@ -8,13 +8,16 @@ import {GameCategories} from '../constants/categories.ts';
 import {AppColors} from '../constants/colors.ts';
 import ArrowUpIcon from '../assets/icons/arrowUpIcon.tsx';
 import ArrowDownIcon from '../assets/icons/arrowDownIcon.tsx';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
 
+type Props = NativeStackScreenProps<RootStackParamList, "CategoryPage">;
 
-export default function CategoriesPage() {
+
+export default function CategoriesPage({navigation}: Props) {
   const dismissKeyboard = () => Keyboard.dismiss();
   const [players,setPlayers] = useState('2');
-  function incement(){
+  function increment(){
     var currentNumber = parseInt(players,10);
     var newNumber = currentNumber + 1;
     if(newNumber<26){
@@ -32,7 +35,7 @@ export default function CategoriesPage() {
   }
   return (
     <TouchableWithoutFeedback onPress={dismissKeyboard}>
-    <SafeAreaView style={globalStyles.main}>
+      <SafeAreaView style={[globalStyles.main, { backgroundColor: 'transparent' }]}>
       <View
         style={[
           globalStyles.row,
@@ -42,12 +45,13 @@ export default function CategoriesPage() {
             marginTop: 40,
             gap: 10,
             marginBottom: 40,
+
           },
         ]}>
         <CustomText fontSize={22} fontWeight={'Bold'}>
           Number of Players :
         </CustomText>
-        <TouchableOpacity onPress={incement}>
+        <TouchableOpacity onPress={increment}>
           <View style={[styles.circle,{alignItems:'center',justifyContent:'center',paddingTop:8}]}>
             <ArrowUpIcon height={20}  />
           </View>
@@ -72,20 +76,20 @@ export default function CategoriesPage() {
       </CustomText>
       <View style={{ flexDirection: 'row',
         flexWrap: 'wrap',
-
         justifyContent: 'space-between',
         padding: 10 }}>
         {
           GameCategories.map((category,index)=>(
             <CategoryButtonComponent
-              category={category.category}
-              id={category.id}
+              title={category.category}
               color={category.color}
               icon={category.icon}
+              onTap={()=>{}}
               key={index}
              />
           ))
         }
+
       </View>
     </SafeAreaView>
     </TouchableWithoutFeedback>
@@ -93,7 +97,6 @@ export default function CategoriesPage() {
 }
 
 const styles = StyleSheet.create({
-
   circle:{
     height: 40,
     width: 40,

@@ -2,10 +2,13 @@ import {Image, SafeAreaView, View} from 'react-native';
 import globalStyles from '../global_styles.tsx';
 import CustomText from '../components/customTextComponent.tsx';
 import ButtonComponent from '../components/ButtonComponent.tsx';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
-export default function HomePage() {
+type Props = NativeStackScreenProps<RootStackParamList, "Home">;
+
+export default function HomePage({navigation }: Props) {
   return (
-    <SafeAreaView style={globalStyles.main}>
+    <SafeAreaView style={[globalStyles.main,{backgroundColor:'transparent'}]}>
       <View
         style={{
           display: 'flex',
@@ -25,7 +28,13 @@ export default function HomePage() {
             objectFit: 'contain',
           }}
         />
-        <ButtonComponent></ButtonComponent>
+        <ButtonComponent
+        title={"Start Game"}
+       callback={()=>{
+         navigation.navigate('CategoryPage');
+       }}
+
+        ></ButtonComponent>
       </View>
     </SafeAreaView>
   );

@@ -1,20 +1,32 @@
 import {AppColors} from '../constants/colors.ts';
 import {View,StyleSheet} from 'react-native';
 import CustomText from './customTextComponent.tsx';
+import React from 'react';
 
-export  default function CategoryButtonComponent({category,
-                                                   icon: Icon, // Destructure the icon
-                                                   color,}:GameCategory) {
+
+type CategoryButtonProps={
+  title:string,
+  onTap:()=>void,
+  icon: React.ComponentProps<any>,
+  color:string
+}
+export  default function CategoryButtonComponent(props:CategoryButtonProps) {
   return (
     <View style={styles.container}>
       <View
         style={[
           styles.circle,
-          {marginBottom: 4, backgroundColor: color,justifyContent:"center", alignItems:"center",},
+          {
+            marginBottom: 4,
+            backgroundColor: props.color,
+            justifyContent: 'center',
+            alignItems: 'center',
+          },
         ]}>
-       <Icon></Icon>
+        <props.icon></props.icon>
       </View>
-      <CustomText fontWeight={'Medium'}>{category}</CustomText>
+
+      <CustomText fontWeight={'Medium'}>{props.title}</CustomText>
     </View>
   );
 }
