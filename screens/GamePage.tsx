@@ -12,10 +12,10 @@ type Props = NativeStackScreenProps<RootStackParamList, 'GamePage'>;
 const GamePage = ({navigation, route}: Props) => {
   const [currentCount, setCount] = useState(1);
   const {categoryTile, playersCount} = route.params || {};
-  function increment(){
-    if(currentCount < playersCount!){
+  function increment() {
+    if (currentCount < playersCount!) {
       setCount(currentCount + 1);
-    }else{
+    } else {
       setCount(1);
       navigation.navigate('RestartPage');
     }
@@ -25,18 +25,27 @@ const GamePage = ({navigation, route}: Props) => {
     <ScrollView
       style={[
         globalStyles.main,
-        {backgroundColor: 'transparent', marginTop: 80,marginHorizontal: 0},
+        {backgroundColor: 'transparent', marginTop: 80, marginHorizontal: 0},
       ]}>
-      <View style={[globalStyles.row, { alignItems: 'center', position: 'relative',marginTop:10 ,marginHorizontal:16}]}>
+      <View
+        style={[
+          globalStyles.row,
+          {
+            alignItems: 'center',
+            position: 'relative',
+            marginTop: 10,
+            marginHorizontal: 16,
+          },
+        ]}>
         <CustomText
           fontSize={24}
           fontWeight={'SemiBold'}
-          style={{ flex: 1, textAlign: 'center' }}>
+          style={{flex: 1, textAlign: 'center'}}>
           {categoryTile}
         </CustomText>
 
         <Pressable
-          style={{ position: 'absolute', right: 0 }}
+          style={{position: 'absolute', right: 0}}
           onPress={() => {
             navigation.goBack();
           }}>
@@ -56,15 +65,11 @@ const GamePage = ({navigation, route}: Props) => {
       <CustomText
         fontSize={18}
         fontWeight={'Medium'}
-        style={{textAlign:"center", marginTop:"10%",color:"grey"}}
-      >
-       Players
+        style={{textAlign: 'center', marginTop: '10%', color: 'grey'}}>
+        Players
       </CustomText>
       <View style={[globalStyles.row, {justifyContent: 'center'}]}>
-        <CustomText
-          fontSize={30}
-          fontWeight={'Medium'}
-         >
+        <CustomText fontSize={30} fontWeight={'Medium'}>
           {currentCount}
         </CustomText>
         <CustomText fontSize={20} fontWeight={'Medium'}>
@@ -75,8 +80,7 @@ const GamePage = ({navigation, route}: Props) => {
           {playersCount}
         </CustomText>
       </View>
-        <AnimatedCircle onPressOut={increment}/>
-
+      <AnimatedCircle defaultSize={300} growBy={300} onPressOut={increment} />
     </ScrollView>
   );
 };

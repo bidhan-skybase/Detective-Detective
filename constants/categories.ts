@@ -15,7 +15,7 @@ const GameCategories: GameCategory[] = [
   },
   {
     id:2,
-    category:'Games',
+    category:'Sports',
     icon:GamesIcon,
     color:AppColors.tealAccentColor
   },
@@ -35,14 +35,14 @@ const GameCategories: GameCategory[] = [
 
   {
     id:5,
-    category:'Vegetables',
+    category:'Food',
     icon:VegetableIcon,
     color:AppColors.purpleAccentColor
 
   },
   {
     id:6,
-    category:'Countries',
+    category:'Places',
     icon:WorldIcon,
     color:AppColors.yellowAccentColor
 

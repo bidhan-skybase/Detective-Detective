@@ -30,27 +30,40 @@ export default function RestartPage({ navigation }: Props) {
         ]}>
 
         <View style={[styles.container]}>
-          <Pressable onPress={()=>{ navigation.goBack() }}>
-            <View style={[styles.circle, {marginHorizontal: 12}]}>
-              <RestartIcon></RestartIcon>
+          <Pressable onPress={() => navigation.goBack()}>
+            <View style={
+              globalStyles.row
+            }>
+              <View style={[styles.circle, {marginHorizontal: 12,}]}>
+                <RestartIcon />
+              </View>
+
+              <CustomText>Restart</CustomText>
             </View>
+
+
           </Pressable>
-
-          <CustomText>Restart</CustomText>
         </View>
-
         <View style={[styles.container]}>
           <Pressable onPress={()=>{ navigation.reset({
             index:0,
             routes:[{name:'CategoryPage'}]
           }) }}>
-            <View style={[styles.circle, {marginHorizontal: 12,backgroundColor: AppColors.tealAccentColor}]}>
-              <CategoriesIcon></CategoriesIcon>
-            </View>
-          </Pressable>
+            <View style={
+              globalStyles.row
+            }>
+              <View style={[styles.circle, {marginHorizontal: 12,backgroundColor: AppColors.tealAccentColor}]}>
+                <CategoriesIcon />
+              </View>
 
-          <CustomText>Categories</CustomText>
+              <CustomText>Categories</CustomText>
+            </View>
+
+
+          </Pressable>
         </View>
+
+
       </View>
     </SafeAreaView>
   );
