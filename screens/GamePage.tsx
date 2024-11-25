@@ -89,7 +89,7 @@ const GamePage = ({navigation, route}: Props) => {
             style={[
               styles.circle,
               {
-                backgroundColor: AppColors.purpleAccentColor,
+                backgroundColor: AppColors.yellowAccentColor,
                 justifyContent: 'center',
                 alignItems: 'center',
               },
@@ -116,7 +116,14 @@ const GamePage = ({navigation, route}: Props) => {
           {playersCount}
         </CustomText>
       </View>
-      <AnimatedCircle defaultSize={300} growBy={300} onPressOut={increment} items={getItems(categoryTile || '')}/>
+      <AnimatedCircle
+        defaultSize={300}
+        growBy={300}
+        onPressOut={increment}
+        items={getItems(categoryTile || '')}
+        currentPlayer={currentCount}
+        totalPlayers={playersCount!}
+      />
     </ScrollView>
   );
 };
