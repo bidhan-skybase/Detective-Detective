@@ -6,12 +6,48 @@ import {AppColors} from '../constants/colors.ts';
 import CustomText from '../components/customTextComponent.tsx';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import AnimatedCircle from '../components/AnimatedContainer.tsx';
+import {CategoryItem, RootStackParamList} from '../type';
+import {Animals} from '../constants/animals.ts';
+import {Sports} from '../constants/games.ts';
+import {Movies} from '../constants/movies.ts';
+import {Vehicles} from '../constants/vehicles.ts';
+import {Vegetables} from '../constants/vegetables.ts';
+import {Countries} from '../constants/countries.ts';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'GamePage'>;
 
 const GamePage = ({navigation, route}: Props) => {
   const [currentCount, setCount] = useState(1);
   const {categoryTile, playersCount} = route.params || {};
+
+  const getItems = (type:string)=>{
+    let items:CategoryItem[];
+    switch (type){
+      case 'Animals':
+        items = Animals;
+        break;
+      case 'Sports':
+        items = Sports;
+        break;
+      case 'Movies':
+        items = Movies;
+        break;
+      case 'Vehicles':
+        items = Vehicles;
+        break;
+      case 'Food':
+        items = Vegetables;
+        break;
+      case 'Places':
+        items = Countries;
+        break;
+      default:
+        items = [];
+        break;
+    }
+    return items;
+  };
+
   function increment() {
     if (currentCount < playersCount!) {
       setCount(currentCount + 1);
@@ -80,7 +116,7 @@ const GamePage = ({navigation, route}: Props) => {
           {playersCount}
         </CustomText>
       </View>
-      <AnimatedCircle defaultSize={300} growBy={300} onPressOut={increment} />
+      <AnimatedCircle defaultSize={300} growBy={300} onPressOut={increment} items={getItems(categoryTile || '')}/>
     </ScrollView>
   );
 };

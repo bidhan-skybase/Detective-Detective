@@ -1,103 +1,105 @@
+import {CategoryItem} from '../type';
+
 const Countries: CategoryItem[] = [
   {
     id:1,
     name:'Sri Lanka',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/srilanka.png'),
   },
   {
     id:2,
     name:'Bali',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/bali.png'),
   },
   {
     id:3,
     name:'Russia',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/russia.png'),
   },
   {
     id:4,
     name:'Washington DC',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/dc.png'),
   },
   {
     id:5,
     name:'Sicily',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/sicily.png'),
   },
   {
     id:6,
     name:'Venice',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/venice.png'),
   },
   {
     id:7,
     name:'Kathmandu',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/ktm.png'),
   },
   {
     id:8,
     name:'North Pole',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/north.png'),
   },
   {
     id:9,
     name:'Monaco',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/monaci.png'),
   },
   {
     id:10,
     name:'Paris',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/paris.png'),
   },
   {
     id:11,
     name:'Lal Kila',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/lalkila.png'),
   },
   {
     id:12,
     name:'Maldives',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/maldives.png'),
   },
   {
     id:13,
     name:'Hungary',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/hungary.png'),
   },
   {
     id:14,
     name:'Bulgaria',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/bulgaria.png'),
   },
   {
     id:15,
     name:'Rome',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/rome.png'),
   },
   {
     id:16,
     name:'Greece',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/greece.png'),
   },
   {
     id:17,
     name:'Kyrgyzstan',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/kyrgyzstan.png'),
   },
   {
     id:18,
     name:'Djibouti',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/djibuti.png'),
   },
   {
     id:19,
     name:'Lithuania',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/lithunia.png'),
   },
   {
     id:20,
     name:'Brunei',
-    image:require('../assets/images/animal.png'),
+    image:require('../assets/images/places/Brunei.png'),
   },
 ]
 export {Countries};

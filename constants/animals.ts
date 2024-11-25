@@ -1,3 +1,5 @@
+import {CategoryItem} from '../type';
+
 const Animals: CategoryItem[] = [
   {
     id:1,

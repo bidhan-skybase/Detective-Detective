@@ -9,6 +9,7 @@ import {AppColors} from '../constants/colors.ts';
 import ArrowUpIcon from '../assets/icons/arrowUpIcon.tsx';
 import ArrowDownIcon from '../assets/icons/arrowDownIcon.tsx';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../type';
 
 
 type Props = NativeStackScreenProps<RootStackParamList, "CategoryPage">;

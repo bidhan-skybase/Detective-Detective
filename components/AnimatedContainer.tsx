@@ -2,26 +2,27 @@ import React, {useRef, useState, useEffect} from 'react';
 import {StyleSheet, Animated, Pressable, View, Image} from 'react-native';
 import CustomText from './customTextComponent.tsx';
 import {AppColors} from '../constants/colors.ts';
-import {Animals} from '../constants/animals.ts';
 import globalStyles from '../global_styles.tsx';
 import {useFocusEffect} from '@react-navigation/native';
+import {CategoryItem} from '../type';
 
 type AnimatedContainerProps = {
   defaultSize:number;
   growBy:number;
   onPressOut: () => void;
+  items:CategoryItem[]
 
 }
 
 const AnimatedCircle = (props:AnimatedContainerProps) => {
   const size = useRef(new Animated.Value(props.defaultSize)).current;
   const [isPressed, setIsPressed] = useState(false);
-  const [item, setItem] = useState(() => Animals[Math.floor(Math.random() * Animals.length)]);
+  const [item, setItem] = useState(() => props.items[Math.floor(Math.random() * props.items.length)]);
 
   useFocusEffect(
     React.useCallback(() => {
-      setItem(Animals[Math.floor(Math.random() * Animals.length)]);
-    }, [])
+      setItem(props.items[Math.floor(Math.random() * props.items.length)]);
+    }, [props.items])
   )
   useEffect(() => {
     if (!isPressed) {
@@ -74,7 +75,7 @@ const AnimatedCircle = (props:AnimatedContainerProps) => {
             style={{
               height:160,
               width: 160,
-              objectFit: 'cover',
+              objectFit: 'scale-down',
               borderRadius: 1000,
               borderWidth:2,
               borderColor:'black',
